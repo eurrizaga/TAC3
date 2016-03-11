@@ -1,0 +1,54 @@
+Pros:
+- Podría usarlo para practicar Angular y Symfony
+- Como son Bs As, No tendría tanto problema con tener que estar presente
+- Me permitiría ganar un extra
+
+Contras:
+- Me meto con los investigadores de nuevo
+- Si me surge un proyecto voy a estar complicado de tiempos
+
+-----------------
+
+Sistema:
+
+- Manejo de Usuarios
+	- Alta
+	- Baja
+	- Modificación
+
+- Manejo de Tareas
+	- Tomar Tarea
+	- Configurar Tarea
+
+- Resultados
+	- Obtener Resultados en XLS
+
+--------------------
+
+Datos:
+
+User
+- Id
+- Clave??
+
+Sujeto
+- Id
+- Apellido
+- Nombre
+- DNI
+- Fecha de Nacimiento
+
+Tarea
+- Parametros
+	[nombre, valor]
+- Funciones
+	- IniciarTarea
+	- InicializarValores
+	- MostrarConsigna
+	- CapturarInput
+	- GuardarResultado
+	- GenerarOutput
+	- GuardarOutput
+	- FinalizarTarea
+- SubTarea
+

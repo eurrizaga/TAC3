@@ -1,0 +1,60 @@
+<div ng-controller="SujetoCtrl">
+  <div class='row'>
+    <nav-bar></nav-bar>
+  </div>
+    <div ng-show="!isSelected">
+      <div class="row">
+        <div class='col-xs-12' align='center'>
+          <button class="btn btn-default" ng-click="addNew()">AGREGAR NUEVO</button>
+        </div>
+      </div>
+      <div class="row" align='center'>
+        <div class='col-xs-12'>
+          <p>Seleccione usuario para editar</p>
+          <table class='table table-stripped'>
+            <thead><td>Name</td><td>Action</td></thead>
+            <tr><td>Name</td><td><input type='checkbox'/></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div ng-show="isSelected">
+      <div class="row" align='center'>
+        <div class='col-xs-12' >
+          <form name="userForm" ng-submit="saveChanges(userForm.$valid)" novalidate>
+            <p><strong>Enter your data:</strong></p>
+            <div class="form-group">
+              Apellido:
+              <input type="text" class="form-control" name="lastname" required />
+              
+              <p ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine" class="help-block">Campo requerido.</p>
+            </div>
+            <div class="form-group">
+              Nombre: 
+              <input type="text" class="form-control" name="firstname" required />
+              
+              <p ng-show="userForm.firstname.$invalid && !userForm.firstname.$pristine" class="help-block">Campo requerido.</p>
+            </div>
+            <div class="form-group">
+              DNI: 
+              <input type="text" class="form-control" name="dni" />
+            </div>
+            <div class="form-group">
+              Fecha de Nacimiento: 
+              <input type="text" class="form-control" name="date" required />
+              <p ng-show="userForm.date.$invalid && !userForm.date.$pristine" class="help-block">Your First Name is required.</p>
+            </div>
+            <div class="form-group">
+                TAREAS
+            </div>
+            <div class="form-group">
+              <button class="btn btn-default" ng-disabled="userForm.$invalid" ng-click="goBack()">VOLVER ATRAS</button>
+              <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">GUARDAR CAMBIOS</button>
+              <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">GUARDAR Y EVALUAR</button>
+            </div>
+          </form> 
+        </div>
+      </div>
+    </div>
+      
+</div>
